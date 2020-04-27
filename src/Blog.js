@@ -1,0 +1,52 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+// Render the 'about' page
+class Blog extends Component {
+   
+    render() {
+        console.log(this.props)
+        const { posts } = this.props;
+        const postList = posts.length ? (
+            posts.map(post => {
+                return (
+                    <div className="post card" key={ post.id }>
+                        <div className="cart-content">
+                            <Link to={'/blog/' + post.id}>
+                                <h3>{ post.title }</h3>
+                            </Link>
+                            <p>{ post.body.substring(0, 120) }...</p>
+                        </div>
+                    </div>
+                )
+            })
+        ) : (
+            <div className="center">No posts.</div>
+        );
+        return (
+            <div className="todo-app container">
+
+                <div className="row">
+                    <div className="col">
+                        <h1 className="center splash--blog">blog</h1>
+                    </div>
+                     <div className="col bg--purple about--text">
+                        { postList }
+                    </div>
+                </div>
+
+                
+            </div>
+    
+        )
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        posts: state.posts
+    }
+}
+
+export default connect(mapStateToProps)(Blog)

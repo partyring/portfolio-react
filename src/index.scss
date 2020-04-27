@@ -1,0 +1,88 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.nav-wrapper {
+  background-color: yellow;
+  ul {
+    color: white;
+  }
+  li {
+    color: red !important;
+    list-style: none;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+.col {
+  padding: 0;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.splash--index {
+  background-image: url('./images/mainimg.jpg');
+  width: 100%;
+  min-height: 50rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.splash--about {
+  background-image: url('https://cdn.pixabay.com/photo/2020/03/17/14/59/illustration-4940622_1280.jpg');
+  background-size: cover;
+  min-height: 50rem;
+}
+
+.splash--blog {
+  background-image: url('https://cdn.pixabay.com/photo/2019/08/26/19/35/landscape-4432624_1280.jpg');
+  background-size: cover;
+  min-height: 50rem;
+}
+
+.bg--peach {
+  background-color: #DF9D76;
+}
+
+.bg--purple {
+  background-color: #ACA6FE;
+}
+
+.about--text {
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 3rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+.post {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
