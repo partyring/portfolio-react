@@ -4,10 +4,20 @@ import GetWeather from './GetWeather'
 const Search = () => {
     return (
         <div className="todo-app container">
-            <h1 className="center blue-text">search weather</h1>
-            <p className="center">get the current forecast to save yourself from looking out of the window</p>
 
-            <GetWeather />
+
+            <div class="row">
+                <div id="splashContact" class="col splash--contact">
+                    <h1 className="center ">search the weather forecast</h1>
+                </div>
+                <div class="col bg--black about--text">
+                    <p>
+                        Can't see out of the window right now? Find out if you'll need an umbrella today.
+                    </p>
+                    <GetWeather />
+                </div>
+            </div>
+         
 
         </div>
 

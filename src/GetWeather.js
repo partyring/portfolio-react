@@ -44,13 +44,33 @@ class GetWeather extends React.Component {
                 })
 
 
-                var rainPattern = /rain/i;
-                var result = this.state.description.match(rainPattern);
+                let weatherTypes = ['rain', 'clouds', 'snow', 'clear', 'thunderstorm'];
+
+                for (var x= 0; x <= weatherTypes.length; x++) {
+                    let p = weatherTypes[x];
+                    console.log(p)
+                    var searchPattern = `/${p}/i`;
+                    var result = this.state.description.match(searchPattern);
+
+                    console.log(result);
+
+                    console.log(`splash--weather-${p}`);
+
+                    if(result !== null) {
+                        var element = document.getElementById("splashContact");
+                        element.classList.add(`splash--weather-${weatherTypes[0]}` );
+                    }
+                }
+
+
+                //google javascript regex pattern variable interpolation
+
+                // var rainPattern = /rain/i;
+                // var result = this.state.description.match(rainPattern);
 
                 if(result !== null) {
-                    setTimeout(() => {
-                        window.location.replace("https://www.youtube.com/watch?v=l5aZJBLAu1E")
-                    }, 4000)
+                    var element = document.getElementById("splashContact");
+                    element.classList.add("splash--weather-rain");
                 }
 
             } else {
