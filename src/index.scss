@@ -12,25 +12,37 @@ body {
 }
 
 h1 {
+  font-size: 2rem;
   font-family: 'Press Start 2P', cursive;
   margin: 0;
   padding-top: 10%;
   padding-left: 5%;
   padding-right: 5%;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 2.5rem;
+  }
 }
 
 .nav-wrapper {
-  background-color: yellow;
   ul {
     color: white;
   }
   li {
-    color: red !important;
     list-style: none;
     a {
       color: black;
       text-decoration: none;
     }
+  }
+}
+
+
+.navbar {
+
+  @include media-breakpoint-up(sm) {
+      min-width: 3rem;
+      background-color: yellow;
   }
 }
 
@@ -40,6 +52,17 @@ h1 {
 
 .container {
   max-width: 100%;
+}
+
+.collapsable {
+  
+  flex-direction: column;
+
+
+  @include media-breakpoint-up(md) {
+
+    flex-direction: row;
+  }
 }
 
 .splash--index {
@@ -53,13 +76,46 @@ h1 {
 .splash--about {
   background-image: url('https://cdn.pixabay.com/photo/2020/03/17/14/59/illustration-4940622_1280.jpg');
   background-size: cover;
-  min-height: 50rem;
+
+  min-height: 20rem;
+
+  @include media-breakpoint-up(md) {
+    min-height: 50rem;
+  }
 }
 
 .splash--blog {
   background-image: url('https://cdn.pixabay.com/photo/2019/08/26/19/35/landscape-4432624_1280.jpg');
   background-size: cover;
-  min-height: 50rem;
+  min-height: 20rem;
+
+  @include media-breakpoint-up(md) {
+    min-height: 50rem;
+  }
+}
+
+.splash--contact {
+  background-image: url('https://cdn.pixabay.com/photo/2018/08/16/19/47/landscape-3611227_1280.jpg');
+  background-size: cover;
+  min-height: 20rem;
+
+  @include media-breakpoint-up(md) {
+    min-height: 50rem;
+  }
+}
+
+.splash--weather-rain {
+  background-image: url('https://www.pixelstalk.net/wp-content/uploads/images1/Anime-download-free-768x480.jpg');
+  background-size: cover;
+  min-height: 20rem;
+
+  @include media-breakpoint-up(md) {
+    min-height: 50rem;
+  }
+
+  h1 {
+    color: white;
+  }
 }
 
 .bg--peach {
@@ -70,10 +126,85 @@ h1 {
   background-color: #ACA6FE;
 }
 
+.bg--black {
+  background-color: #12162F;
+  color: white;
+}
+
+.btn--top-margin {
+  margin-top: 2rem;
+}
+
+.speech-bubble {
+	position: relative;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: .4em;
+  min-width: 18rem;
+  padding: 2rem;
+  margin: 1rem;
+
+  @include media-breakpoint-up(sm) {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-top: 2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    min-width: 20rem;
+    padding: 3rem;
+
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+
+  
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #ffffff;
+	border-bottom: 0;
+	margin-left: -20px;
+	margin-bottom: -20px;
+}
+
 .about--text {
-  padding-top: 5rem;
-  padding-left: 5rem;
-  padding-right: 3rem;
+
+  // padding: 2rem;
+  // margin: 2rem;
+  // width: 90%;
+
+  // @include media-breakpoint-up(md) {
+  //   width: 100%;
+  // }
+
+  // @include media-breakpoint-up(lg) {
+  //   margin: 0;
+  //   padding-top: 5rem;
+  //   padding-left: 5rem;
+  //   padding-right: 3rem;
+  // }
+
+    margin: 0;
+    padding-top: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    @include media-breakpoint-up(md) {
+      padding-left: 5rem;
+      padding-right: 3rem;
+    }
 }
 
 code {
@@ -85,4 +216,8 @@ code {
 .post {
   padding: 1rem;
   margin-bottom: 1rem;
+}
+
+.form--weather {
+  display: grid;
 }

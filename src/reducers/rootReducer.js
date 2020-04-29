@@ -8,7 +8,8 @@ const initState = {
         },
         {
             id: '2',
-            title: 'starting a new job', 
+            title: 'starting a new job',
+            date: '01/01/2010',
             body: 'dolore placeat quibusdam ea quo vitae magni quis enim qui quis quo nemo aut saepe quidem repellat excepturi ut quia sunt ut sequi eos ea sed quas'
         },
         {
@@ -19,12 +20,18 @@ const initState = {
         },
         {
             id: '4', 
+            title: 'Using Sentry',
+            date: '13/12/2019',
+            body: 'Sentry is a really useful tool for developers to track bugs before they get reported - why wait for a customer to report an issue when you can be notified as soon as an exception is thrown? This has been really great for helping with customer support as well as tracking any issues on a staging site before it goes live on production.'
+        },
+        {
+            id: '5', 
             title: 'University Final Year Project',
             date: '13/02/2019',
             body: '"How can we vote electronically in a secure way?" I created a working demo of a verifiable voting system. Created using Java for Android, with a Web application built using object-oriented PHP. This project was based on the Prêt-à-Voter system.'
         },
         {
-            id: '5', 
+            id: '6', 
             date: '03/11/2016',
             title: 'Integrating Perl, PHP and JavaScript', 
             body: 'I created a server management interface whilst working as a Trainee Computer Scientist using JavaScript, PHP and Perl to provide information to a hospital computing department in order to notify them of any downtime.'

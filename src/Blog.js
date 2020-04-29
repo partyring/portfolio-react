@@ -16,6 +16,7 @@ class Blog extends Component {
                             <Link to={'/blog/' + post.id}>
                                 <h3>{ post.title }</h3>
                             </Link>
+                            <p> { post.date }</p>
                             <p>{ post.body.substring(0, 120) }...</p>
                         </div>
                     </div>

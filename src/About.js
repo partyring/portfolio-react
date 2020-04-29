@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div className="todo-app container">
 
-            <div class="row">
+            <div class="row collapsable">
                 <div class="col">
                     <h1 className="center splash--about">about</h1>
                 </div>

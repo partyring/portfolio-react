@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { deletePost } from '../actions/postActions'
 
 class Post extends Component {
 
@@ -16,6 +15,7 @@ class Post extends Component {
         const post = this.props.post ? (
             <div className="center">
                 <h1 className="center">{ this.props.post.title }</h1>
+                <p>Posted on: { this.props.post.date }</p>
                 <p>{ this.props.post.body }</p>
             </div>
         ) : (

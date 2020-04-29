@@ -7,14 +7,14 @@ class Form extends React.Component {
 
         return (
             <div>
-                <form onSubmit={this.props.getWeather}>
-                    <label htmlFor="input">city</label>
+                <form class="form--weather" onSubmit={this.props.getWeather}>
+                    <label htmlFor="city">City:</label>
                     <input type="text" name="city" id="city"></input>
 
-                    <label htmlFor="input">country</label>
+                    <label htmlFor="country">Country:</label>
                     <input type="text" name="country" id="country"></input>
 
-                    <button>get weather</button>
+                    <button class='btn btn-light btn--top-margin'>Search</button>
                 </form>
             </div>
         );
