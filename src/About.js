@@ -1,14 +1,13 @@
 import React from 'react'
-import Rainbow from './components/hoc/Rainbow'
 
 // Render the 'about' page
 const About = () => {
     return (
-        <div className="todo-app container">
+        <div className="portfolio-app container full-height">
 
-            <div class="row collapsable">
-                <div class="col">
-                    <h1 className="center splash--about">about</h1>
+            <div class="row collapsable full-height">
+                <div class="col splash--about">
+                    <h1 className="center ">about</h1>
                 </div>
                 <div class="col bg--peach about--text">
                     <p>
@@ -23,7 +22,7 @@ const About = () => {
                         I really like the tech community, and frequently go to technology meetups to meet others in the field and learn about new concepts.
                         I do volunteer Web development for people or causes in need, and really enjoy to share my skills with others.
                         <br /><br />
-                        Outside of Web development you will probably catch me on my skateboard around Bristol, up a hill or dreaming about mountains.
+                        Outside of Web development you will probably catch me on my skateboard around Bristol or up a hill of some description.
                     </p>
                 </div>
             </div>
@@ -34,4 +33,4 @@ const About = () => {
     )
 }
 
-export default Rainbow(About)
+export default About

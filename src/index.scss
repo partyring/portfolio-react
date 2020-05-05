@@ -1,5 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +13,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%;
+  height: 100%;
+}
+
+.full-height {
+  min-height: 100%;
+}
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -71,6 +86,18 @@ h1 {
   min-height: 50rem;
   background-repeat: no-repeat;
   background-size: cover;
+  @include media-breakpoint-up(md) {
+    min-height: 60rem;
+  }
+  @include media-breakpoint-up(lg) {
+    min-height: 80rem;
+  }
+
+  h1 {
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+  }
 }
 
 .splash--about {
@@ -118,6 +145,36 @@ h1 {
   }
 }
 
+.splash--weather-clouds {
+  background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/10/Anime-scenery-anime-landscape-768x386.jpg');
+  background-size: cover;
+  min-height: 20rem;
+
+  @include media-breakpoint-up(md) {
+    min-height: 50rem;
+  }
+}
+
+.splash--weather-clear {
+  background-image: url('https://wallpaperaccess.com/full/41115.png');
+  background-size: cover;
+  min-height: 20rem;
+
+  @include media-breakpoint-up(md) {
+    min-height: 50rem;
+  }
+}
+
+.splash--weather-snow {
+  background-image: url('https://wallpaperaccess.com/full/876541.jpg');
+  background-size: cover;
+  min-height: 20rem;
+
+  @include media-breakpoint-up(md) {
+    min-height: 50rem;
+  }
+}
+
 .bg--peach {
   background-color: #DF9D76;
 }
@@ -158,8 +215,10 @@ h1 {
   }
 
   @include media-breakpoint-up(lg) {
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 1.5rem;
   }
 
   
@@ -200,6 +259,7 @@ h1 {
     padding-top: 5rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-bottom: 3rem;
 
     @include media-breakpoint-up(md) {
       padding-left: 5rem;
@@ -220,4 +280,38 @@ code {
 
 .form--weather {
   display: grid;
+}
+
+
+.footer {
+  min-height: 10rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 4rem;
+
+  a {
+    color: #DF81AD;
+  }
+
+  .social-media {
+    display: grid;
+
+    @include media-breakpoint-up(md) {
+      display: inline;
+    }
+
+  }
+
+  .link--social-media {
+    padding: 1rem;
+
+
+      color: #47E069;
+
+  }
+
+  p {
+    padding-top: 1rem;
+  }
 }

@@ -46,27 +46,59 @@ class GetWeather extends React.Component {
 
                 let weatherTypes = ['rain', 'clouds', 'snow', 'clear', 'thunderstorm'];
 
-                for (var x= 0; x <= weatherTypes.length; x++) {
-                    let p = weatherTypes[x];
-                    console.log(p)
-                    var searchPattern = `/${p}/i`;
-                    var result = this.state.description.match(searchPattern);
+                // for (var x= 0; x <= weatherTypes.length; x++) {
+                //     let p = weatherTypes[x];
+                //     console.log(p)
+                //     var searchPattern = `/${p}/i`;
+                //     var result = this.state.description.match(searchPattern);
 
-                    console.log(result);
+                //     console.log(result);
 
-                    console.log(`splash--weather-${p}`);
+                //     console.log(`splash--weather-${p}`);
 
-                    if(result !== null) {
-                        var element = document.getElementById("splashContact");
-                        element.classList.add(`splash--weather-${weatherTypes[0]}` );
-                    }
-                }
+                //     if(result !== null) {
+                //         var element = document.getElementById("splashContact");
+                //         element.classList.add(`splash--weather-${weatherTypes[0]}` );
+                //     }
+                // }
 
 
                 //google javascript regex pattern variable interpolation
 
-                // var rainPattern = /rain/i;
-                // var result = this.state.description.match(rainPattern);
+                var rainPattern = /rain/i;
+                var result = this.state.description.match(rainPattern);
+ 
+                if(result !== null) {
+                    var element = document.getElementById("splashContact");
+                    element.classList.add("splash--weather-rain");
+                }
+
+                var rainPattern = /clouds/i;
+                var result = this.state.description.match(rainPattern);
+
+                if(result !== null) {
+                    var element = document.getElementById("splashContact");
+                    element.classList.add("splash--weather-clouds");
+                }
+
+                var rainPattern = /snow/i;
+                var result = this.state.description.match(rainPattern);
+
+                if(result !== null) {
+                    var element = document.getElementById("splashContact");
+                    element.classList.add("splash--weather-snow");
+                }
+
+                var rainPattern = /clear/i;
+                var result = this.state.description.match(rainPattern);
+
+                if(result !== null) {
+                    var element = document.getElementById("splashContact");
+                    element.classList.add("splash--weather-clear");
+                }
+
+                var rainPattern = /thunderstorm/i;
+                var result = this.state.description.match(rainPattern);
 
                 if(result !== null) {
                     var element = document.getElementById("splashContact");

@@ -35,6 +35,12 @@ const initState = {
             date: '03/11/2016',
             title: 'Integrating Perl, PHP and JavaScript', 
             body: 'I created a server management interface whilst working as a Trainee Computer Scientist using JavaScript, PHP and Perl to provide information to a hospital computing department in order to notify them of any downtime.'
+        },
+        {
+            id: '7', 
+            date: '03/11/2016',
+            title: 'Integrating Perl, PHP and JavaScript', 
+            body: 'I created a server management interface whilst working as a Trainee Computer Scientist using JavaScript, PHP and Perl to provide information to a hospital computing department in order to notify them of any downtime.'
         }
     ]
 }

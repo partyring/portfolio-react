@@ -2,10 +2,10 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div className="todo-app container">
-            <div class="row">
-                <div class="col">
-                    <h1 className="center splash--contact">contact</h1>
+        <div className="portfolio-app container full-height">
+            <div class="row full-height">
+                <div class="col splash--contact">
+                    <h1 className="center">contact</h1>
                 </div>
                 <div class="col bg--black about--text">
                     <p>

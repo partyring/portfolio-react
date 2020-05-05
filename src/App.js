@@ -8,6 +8,7 @@ import Search from './Search';
 import Blog from './Blog';
 import Post from './components/Post'
 import Home from './Home'
+import Footer from './components/Footer'
 
 class App extends Component {
 
@@ -16,7 +17,7 @@ class App extends Component {
     return (
       // Set the routes for the nav bar
       <BrowserRouter>
-        <div className="App">
+        <div className="App full-height">
           <Navbar />
           <Route exact path ='/' component={Home} />
           <Route path ='/about' component={About} />
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path ='/search-weather' component={Search} />
           <Route exact path ='/blog' component={Blog} />
           <Route path = '/blog/:post_id' component={Post} />
+          <Footer />
         </div>
       </BrowserRouter>
     );
